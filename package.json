@@ -18,6 +18,7 @@
   "homepage": "https://github.com/whatnameshouldiuse/UTFSB-Project2-Group8#readme",
   "dependencies": {
     "bcrypt": "^5.1.1",
+    "bootstrap": "^5.3.2",
     "connect-session-sequelize": "^7.1.7",
     "dayjs": "^1.11.10",
     "dotenv": "^16.3.1",
