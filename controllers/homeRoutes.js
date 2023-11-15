@@ -5,6 +5,8 @@ router.get('/', async (req, res) => {
     //TODO: Render homepage, aka Project Dashboard
     // Use current user data to find projects to display
     // If not logged in, redirect to /login
+
+    res.render('homepage');
 });
 
 router.get('/login', async (req, res) => {

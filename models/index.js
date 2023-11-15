@@ -4,7 +4,7 @@ const Task = require('./Task');
 const Checkpoint = require('./Checkpoint');
 
 User.hasMany(Project, {
-    foreignKey: user_id,
+    foreignKey: 'user_id',
     onDelete: 'CASCADE'
 });
 
