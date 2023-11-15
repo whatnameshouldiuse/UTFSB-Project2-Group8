@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "name": "Example Project 1",
+        "user_id": "0001"
+    },
+    {
+        "id": 2,
+        "name": "Example Project 2",
+        "user_id": "0001"
+    },
+    {
+        "id": 3,
+        "name": "Example Project 3",
+        "user_id": "0002"
+    }
+]

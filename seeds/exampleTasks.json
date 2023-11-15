@@ -1,0 +1,11 @@
+[
+    {
+        "id": 1,
+        "name": "Short and Easy Assignment",
+        "start_date": "2023-11-13T00:00:00",
+        "end_date": "2023-11-15T00:00:00",
+        "color": "#FF0000",
+        "priority": 0,
+        "project_id": 1
+    }
+]
