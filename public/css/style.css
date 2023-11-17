@@ -1,0 +1,35 @@
+:root {
+    --primary: #ccdad1;
+    --secondary: #9caea9;
+    --tertiary: #788585;
+    --light-dark: #6f6866;
+    --dark: #38302e;
+    --border-radius: .3rem;
+  }
+  
+/* CARDS */
+.card {
+    margin: 0 0 0 0;
+  
+    border: 0px solid var(--dark);
+    border-radius: var(--border-radius);  
+  }
+  
+  .card-header {
+    color: var(--primary);
+    background-color: var(--dark);
+    padding: 1.0%;
+  /*  border-radius: calc(.18rem - 1px) calc(.18rem - 1px) 0 0;*/
+  }
+  
+  .card-body {
+    padding: 1.0%;
+    color: var(--dark);  
+  }
+  
+  .card-body:hover {
+    padding: 1.0%;
+    color: var(--dark);
+  
+  }
+  
