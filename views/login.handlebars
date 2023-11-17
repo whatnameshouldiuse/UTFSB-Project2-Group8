@@ -1,0 +1,98 @@
+{{!-- <html>
+
+<head>
+    <title>Login Page</title>
+</head>
+
+<body>
+
+    <h2>Welcome To PlanForge </h2>
+
+    <form action="/api/users" method="post">
+        <div class="container">
+            <label for="name"><b>Name</b></label>
+            <input type="text" placeholder="Enter name" name="name" required>
+
+            <label for="email"><b>Email</b></label>
+            <input type="email" placeholder="Enter email" name="email" required>
+
+            <label for="password"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="password" required>
+
+            <button type="submit">Register</button>
+        </div>
+    </form>
+    
+<h2>Don't have an account yet? Let's make one over here! </h2>
+    <form action="/api/users" method="post">
+        <div class="container">
+            <label for="name"><b>Name</b></label>
+            <input type="text" placeholder="Enter name" name="name" required>
+
+            <label for="email"><b>Email</b></label>
+            <input type="email" placeholder="Enter email" name="email" required>
+
+            <label for="password"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="password" required>
+
+            <button type="submit">Register</button>
+        </div>
+    </form>
+
+
+
+</body>
+
+</html> --}}
+<html>
+
+<head>
+    <title>Login Page</title>
+</head>
+
+<body>
+
+    <h2>Welcome To PlanForge </h2>
+
+    <form id="login-form">
+        <div class="container">
+            <label for="name"><b>Name</b></label>
+            <input type="text" placeholder="Enter name" name="name" required>
+
+            <!-- <label for="email"><b>Email</b></label>
+            <input type="email" placeholder="Enter email" name="email" required> -->
+
+            <label for="password"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="password" required>
+
+            <button type="submit">Login</button>
+        </div>
+    </form>
+    
+<h2>Don't have an account yet? Let's make one over here! </h2>
+    <form id="sign-up-form">
+        <div class="container">
+            <label for="first name"><b>First Name</b></label>
+            <input id="signup-name" type="text" placeholder="Enter first name" name="name" required>
+            
+            <label for="last name"><b>Last Name</b></label>
+            <input type="text" placeholder="Enter last name" name="name" required>
+            
+
+            <label for="email"><b>Email</b></label>
+            <input id= "signup-email" type="email" placeholder="Enter email" name="email" required>
+
+            <label for="password"><b>Password</b></label>
+            <input id = "signup-password" type="password" placeholder="Enter Password" name="password" required>
+            
+            <label for="confirm password"><b>Confirm Password</b></label>
+            <input type="password" placeholder="Confirm Password" name="confirm password" required>
+            
+            <h2>What is your favorite color?</h2>
+
+            <label for="favorite color"><b>Name</b></label>
+            <input type="text" placeholder="Enter Color" name="color" required>
+            <button type="submit">Register</button>
+        </div>
+    </form>
+    <script src="./js/login.js"></script>

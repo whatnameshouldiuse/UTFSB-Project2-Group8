@@ -12,6 +12,11 @@ router.get('/', async (req, res) => {
 router.get('/login', async (req, res) => {
     //TODO: login page
     // If there is a user data stored in the session already, redirect to homepage
+    if(req.session.logged_in){
+        res.redirect('/')
+        return
+    }
+    res.render("login");
 });
 
 router.get('/signup', async (req, res) => {
