@@ -12,6 +12,12 @@
     {
         "id": 3,
         "name": "Example Project 3",
-        "user_id": "0002"
+        "user_id": "0001"
+    },
+    {
+        "id": 4,
+        "name": "Project 4",
+        "user_id": "0001"
     }
+
 ]
