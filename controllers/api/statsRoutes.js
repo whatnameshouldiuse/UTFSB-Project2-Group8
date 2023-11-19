@@ -7,15 +7,13 @@ router.get('/user/:id', async (req, res) => {
     console.log(req.params.id);    
     
     try {
-        const userData = await User.findAll({
-
-        });
+        const userData = await User.findByPk(4);
 
         console.log(userData);
         const user = userData.get({plain: true});
     
         console.log(user);
-        console.log(...user);        
+//        console.log(...user);        
 
         res.status(200).json(user);
       } catch (err) {

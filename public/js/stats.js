@@ -1,7 +1,10 @@
 const AllProjectBarChart = document.getElementById("AllProjectChart");
 const OneProjectBarChart = document.getElementById("OneProjectBarChart");
 const OneProjectPieChart = document.getElementById("OneProjectPieChart");
-const ProjectInfoElement = document.getElementById("ProjectInfo");
+const UserInfoElement = document.getElementById("UserInfo");
+const ProjectInfoElement = document.getElementById("Project-information-dev");
+const UserHeaderElement = document.getElementById("User-header");
+const ProjectHeaderElement = document.getElementById("Project-header");
 
 const COLORS = [
     '#6879D0',    
@@ -73,15 +76,35 @@ function GetDataForAllProjectChart(AllProjectdata)
     return ChartData;
 }
 
-function GetOptionForProjectChart(AllProjectdata)
+function GetOptionForProjectChart(userData, AllProjectdata)
 {
     const ChartOption = {
         indexAxis: 'y',      
+        scales: {
+        },
+        plugins: {
+//             title: {
+//                 display: true,
+//                 text: 'Projects of User',
+//                 padding: {
+//                     top: 10,
+//                     bottom: 30
+//                 },
+//                 // font: {
+//                 //     size: 20,
+//                 //     weight: bold,                    
+//                 // },
+// //                color: {}
+//             },
+            legend: {
+                display: false
+            },    
+        },
         onClick: (e, activeEls) => {
             // console.log("Click!", activeEls);
             // console.log("index = ", activeEls[0].index);
 
-            RenderOneProjectChart(activeEls[0].index, AllProjectdata);
+            RenderOneProjectChart(userData, activeEls[0].index, AllProjectdata);
         }
     };
 
@@ -100,10 +123,30 @@ function RenderAllProjectChart(ChartData, ChartOption)
     console.log("OneProjectPieChart: ", OneProjectPieChart);
 }
 
-
-
-function RenderOneProjectChart(projectIndex, AllProjectdata)
+function DisplayOneProjectInfo(userData, projectIndex, AllProjectdata)
 {
+    ProjectHeaderElement.innerHTML = AllProjectdata[projectIndex].name + " Project";
+
+    UserInfoElement.innerHTML = userData.name + "'s " + AllProjectdata[projectIndex].name + " Project is filled with";
+    UserInfoElement.innerHTML += "<br>"
+
+    for (i=0; i<AllProjectdata[projectIndex].tasks.length-1; i++)
+    {
+        UserInfoElement.innerHTML += "&#8226 " + AllProjectdata[projectIndex].tasks[i].name + ',';
+        UserInfoElement.innerHTML += "<br>"        
+    }
+    UserInfoElement.innerHTML += "&#8226 " + AllProjectdata[projectIndex].tasks[i].name;
+    UserInfoElement.innerHTML += " Tasks";
+
+}
+
+
+function RenderOneProjectChart(userData, projectIndex, AllProjectdata)
+{
+
+    EnableProjectInfo();
+
+    DisplayOneProjectInfo(userData, projectIndex, AllProjectdata);
 
     RenderOneProjectBarChart(projectIndex, AllProjectdata);
     RenderOneProjectPieChart(projectIndex, AllProjectdata);
@@ -192,6 +235,13 @@ function RenderOneProjectBarChart(projectIndex, AllProjectdata)
         },    
         options: {
             indexAxis: 'y',
+            scales: {
+            },
+            plugins: {
+                legend: {
+                    display: false
+                },
+            },
         }
     });  
 
@@ -245,6 +295,17 @@ function DisplayUserProjectInfo(userData, AllProjectdata)
     console.log(userData);
     console.log(AllProjectdata);
 
+    UserHeaderElement.innerHTML = userData.name + "'s Projects";
+    UserInfoElement.innerHTML = userData.name + " has been so busy with ";
+    UserInfoElement.innerHTML += "<br>"
+
+    for (i=0; i<AllProjectdata.length-1; i++)
+    {
+        UserInfoElement.innerHTML += "&#8226 " + AllProjectdata[i].name + ',';
+        UserInfoElement.innerHTML += "<br>"        
+    }
+    UserInfoElement.innerHTML += "&#8226 " + AllProjectdata[AllProjectdata.length-1].name;
+    UserInfoElement.innerHTML += " Projects";
 }
 
 
@@ -266,7 +327,7 @@ function InitializeAllProjectChart (userData)
         console.log(AllProjectdata);
 
         const AllProjectData = GetDataForAllProjectChart(AllProjectdata);        
-        const AllProjectOption = GetOptionForProjectChart(AllProjectdata);
+        const AllProjectOption = GetOptionForProjectChart(userData, AllProjectdata);
 
         DisplayUserProjectInfo(userData, AllProjectdata);
         RenderAllProjectChart(AllProjectData, AllProjectOption);
@@ -281,31 +342,45 @@ function InitializeAllProjectChart (userData)
     .catch (error => console.error("Error", error));    
 }
 
+function DisableProjectInfo()
+{
+    ProjectInfoElement.style.display = "none";
+}
+
+function EnableProjectInfo()
+{
+    ProjectInfoElement.style.display = "block";
+}
+
+
+
 var InitializeUserInfo
 {
 
     console.log("InitializeUserInfo");
 
+    DisableProjectInfo();
+
     const id = 1;
     console.log(id);
 
     const userData=[];
-    InitializeAllProjectChart(userData);
+//    InitializeAllProjectChart(userData);
 
 
-    // fetch(`/api/stats/user/${id}`).then (response => {
-    //     if (!response.ok)
-    //     {
-    //         throw new Error("Error");
-    //     }
-    //     return response.json();
-    // }) 
-    // .then (userData => {
-    //     console.log(userData);
+    fetch(`/api/stats/user/${id}`).then (response => {
+        if (!response.ok)
+        {
+            throw new Error("Error");
+        }
+        return response.json();
+    }) 
+    .then (userData => {
+        console.log(userData);
 
-    //     InitializeAllProjectChart(userData);
-    // })
-    // .catch (error => console.error("Error", error));    
+        InitializeAllProjectChart(userData);
+    })
+    .catch (error => console.error("Error", error));    
 
     
 }
