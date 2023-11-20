@@ -1,71 +1,165 @@
-:root {
-    --primary: #ccdad1;
-    --secondary: #9caea9;
-    --tertiary: #788585;
-    --light-dark: #6f6866;
-    --dark: #38302e;
-    --border-radius: .3rem;
-    --stat-secondary: #e7eceb;    
-    --stat-primary: #eaedeb;    
-    --stat-header: #000137;
-  }
-  
-/* CARDS */
-.card {
-    margin: 0 0 0 0;
-  
-    border: 0px solid var(--dark);
-    border-radius: var(--border-radius);  
-  }
+* {
+    font-family: 'Poiret One', cursive;
+    color: white;
+}
 
-  .stat-card {
-    margin: 0 10px 0 0;
-  
-    border: 2px solid var(--stat-secondary);
-    border-radius: var(--border-radius);  
-    box-shadow: 6px 5px var(--stat-primary);    
-    max-height: 80vh;
-  }
+html,
+body {
+    height: 100%;
+}
 
-  .stat-col-lg-40 {
-    flex: 0 0 40%;
-    max-width: 40%;
-  }
-  
-  .stat-col-lg-55 {
-    flex: 0 0 55%;
-    max-width: 55%;
-  }
-  
-  
-  .card-header {
-    color: var(--primary);
-    background-color: var(--secondary);
-    padding: 1.0%;
-  /*  border-radius: calc(.18rem - 1px) calc(.18rem - 1px) 0 0;*/
-  }
-  
-  .stat-card-header {
-    color: var(--stat-header);
-    background-color: white;
-    padding: 1.0%;
-    text-align: center;
-  /*  border-radius: calc(.18rem - 1px) calc(.18rem - 1px) 0 0;*/
-  }
-  
+body {
+    background: linear-gradient(rgb(11, 83, 148), rgb(200, 217, 243));
+    background-attachment: fixed;
+}
 
-  .stat-card-body {
-    padding: 5.0%;
-    color: var(--dark);  
+/* styling for header */
+h1 a {
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    width: 100%;
+}
+
+/* navbar styling */
+.navbar {
+    background-color: rgb(7, 55, 99);
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+.navbar a {
+    color: white;
+    margin-right: 20px;
+}
+
+.navbar a:hover {
+    color: rgb(124, 187, 243);
+}
+
+/* login and signup form styling */
+.global-container {
+    height:100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    padding-top: 20px;
+    width: 50%;
+    margin: 0px auto;
+}
+
+form{
+	padding-top: 10px;
+	font-size: 14px;
+	margin-top: 30px;
+}
+
+.btn{
+	font-size: 14px;
+	margin-top:20px;
+}
+
+.login-form{ 
+	width:330px;
+	margin:20px;
+}
+
+.sign-up{
+	text-align:center;
+	padding:20px 0 0;
+}
+
+.card-title {
+    font-weight: 400;
+    color: navy;
+}
+
+label {
+    color: navy;
+    font-weight: 600;
+}
+
+/* dashboard styling */
+.projects {
     display: flex;
-    margin-left: 10px;
-    margin-right: 10px;
-    padding-bottom : 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin: 20px;
+    background-color: rgb(7, 55, 99, 0.5);
+    border-radius: 20px;
+}
+
+.card-2 {
+    background-color: rgb(9, 42, 73);
+    color: white;
+    flex-grow: 1;
+    padding: 10px;
+    margin: 10px;
+}
+
+.card-2 a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.card a:hover {
+    color: rgb(124, 187, 243);
+}
+
+/* styling for main page */
+.home-head p {
+    position: relative;
+    font-size: 40px;
+    font-weight: 500;
+    text-decoration: underline;
+    white-space: nowrap;
+    padding-right: 10px;
+}
+
+.container-fluid {
+    display: flex;
+    border-style: double;
+    border-color: rgb(9, 42, 73);
+    height: 75%;
+    width: 100%;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 0px auto;
+    background-color: rgb(9, 42, 73, 0.2);
+    overflow: auto;
+}
+
+.stats-link a {
+    text-decoration: none;
+    color: white;
+    align-self: flex-end;
+    font-weight: 600;
+    font-size: 20px;
+    white-space: nowrap;
+    padding-left: 20px;
+    float: right;
+}
+
+.stats-link a:hover {
+    color: rgb(141, 202, 255);
+}
+
+/* scrollbar styling */
+*::-webkit-scrollbar {
+    width: 17px;
   }
-  
-  .card-body:hover {
-    padding: 1.0%;
-    color: var(--dark);
-  
+
+  *::-webkit-scrollbar-track {
+    background: #5891c6;
   }
-  
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #a1c6f7;
+    border-radius: 15px;
+    border: 2px double #ffffff;
+  }
