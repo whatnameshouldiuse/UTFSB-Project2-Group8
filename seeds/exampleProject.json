@@ -1,17 +1,23 @@
 [
     {
         "id": 1,
-        "name": "Example Project 1",
+        "name": "Core Curriculum",
         "user_id": "0001"
     },
     {
         "id": 2,
-        "name": "Example Project 2",
+        "name": "Computer Science",
         "user_id": "0001"
     },
     {
         "id": 3,
-        "name": "Example Project 3",
-        "user_id": "0002"
+        "name": "Bootcamp",
+        "user_id": "0001"
+    },
+    {
+        "id": 4,
+        "name": "Personal",
+        "user_id": "0001"
     }
+
 ]

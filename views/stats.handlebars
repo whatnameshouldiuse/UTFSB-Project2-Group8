@@ -1,0 +1,38 @@
+
+<div>
+    <div class = "row justify-around">    
+        <div class = "stat-col-lg-40 stat-card">
+        <h3 class = "stat-card-header m-1 pb-2" id = "User-header">User Information</h3>     
+
+            <div >
+                <canvas id="AllProjectChart"  ></canvas>
+            </div>
+
+            <p class = "flex-row justify-center" style = "color:orange">Click a project bar! &nbsp<img src="/image/click.gif" width="70"></p>
+            <div class = "stat-card-body" id="UserInfo" >
+
+            </div>
+        </div>  
+
+
+        <div class = "stat-col-lg-55 stat-card" id="Project-information-dev">
+        <h3 class = "stat-card-header m-1 pb-2" id = "Project-header">Project Information</h3>   
+            <div class = "flex-row col-11 justify-center">
+
+                    <canvas id="OneProjectBarChart"></canvas>     
+
+            </div>
+
+            <div class = "flex-row col-10 justify-center">
+
+                    <canvas id="OneProjectPieChart"></canvas>            
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="/js/stats.js"></script>

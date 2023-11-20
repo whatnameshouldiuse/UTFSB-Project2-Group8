@@ -5,6 +5,8 @@ router.get('/', async (req, res) => {
     //TODO: Render homepage, aka Project Dashboard
     // Use current user data to find projects to display
     // If not logged in, redirect to /login
+
+    res.render('homepage');
 });
 
 router.get('/login', async (req, res) => {
@@ -22,15 +24,10 @@ router.get('/project/:id', async (req, res) => {
 }); 
 
 router.get('/stats', async (req, res) => {
-    //TODO: statistics page for website in general
+
+    res.render('stats');
 });
 
-router.get('/stats/user/:id', async (req, res) => {
-    //TODO: statistics page for selected user
-});
 
-router.get('/stats/project/:id', async (req, res) => {
-    //TODO: statistics page for selected project
-});
 
 module.exports = router;

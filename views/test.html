@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>KyoSook Shin</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />    
+  </head>
+
+  <body>
+
+<nav class="col-12">
+    <ul class="display-flex flex-row justify-space-between">
+        <div class="col-6">
+            <canvas id="myChart"></canvas>
+        </div>
+        <div class="col-6">
+        second 50%
+        </div>
+    </ul>
+</nav>    
+
+</body>
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+<script>
+const ctx = document.getElementById("myChart");
+
+
+new Chart (ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Red', 'Blue'],
+        datasets: [{
+            label: '# of Votes',
+            data: [40, 50],
+            borderWidth: 1
+        }]
+    }
+});
+
+</script>
