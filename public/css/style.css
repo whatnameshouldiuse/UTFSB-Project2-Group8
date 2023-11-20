@@ -1,0 +1,149 @@
+* {
+    font-family: 'Poiret One', cursive;
+    color: white;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background: linear-gradient(rgb(11, 83, 148), rgb(200, 217, 243));
+    background-attachment: fixed;
+}
+
+/* styling for header */
+h1 a {
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    width: 100%;
+}
+
+/* navbar styling */
+.navbar {
+    background-color: rgb(7, 55, 99);
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+.navbar a {
+    color: white;
+    margin-right: 20px;
+}
+
+.navbar a:hover {
+    color: rgb(124, 187, 243);
+}
+
+/* login and signup form styling */
+.global-container {
+    height:100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    padding-top: 20px;
+    width: 50%;
+    margin: 0px auto;
+}
+
+form{
+	padding-top: 10px;
+	font-size: 14px;
+	margin-top: 30px;
+}
+
+.btn{
+	font-size: 14px;
+	margin-top:20px;
+}
+
+.login-form{ 
+	width:330px;
+	margin:20px;
+}
+
+.sign-up{
+	text-align:center;
+	padding:20px 0 0;
+}
+
+.card-title {
+    font-weight: 400;
+    color: navy;
+}
+
+label {
+    color: navy;
+    font-weight: 600;
+}
+
+/* dashboard styling */
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin: 20px;
+    background-color: rgb(7, 55, 99, 0.5);
+    border-radius: 20px;
+}
+
+.card-2 {
+    background-color: rgb(9, 42, 73);
+    color: white;
+    flex-grow: 1;
+    padding: 10px;
+    margin: 10px;
+}
+
+.card-2 a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.card a:hover {
+    color: rgb(124, 187, 243);
+}
+
+/* styling for main page */
+.home-head {
+    font-size: 40px;
+    font-weight: 500;
+    text-decoration: underline;
+    white-space: nowrap;
+    padding-right: 10px;
+}
+
+.container-fluid {
+    display: flex;
+    border-style: double;
+    border-color: rgb(9, 42, 73);
+    height: 75%;
+    width: 100%;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 0px auto;
+    background-color: rgb(9, 42, 73, 0.2);
+    overflow: auto;
+}
+
+/* scrollbar styling */
+*::-webkit-scrollbar {
+    width: 17px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #5891c6;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #a1c6f7;
+    border-radius: 15px;
+    border: 2px double #ffffff;
+  }
