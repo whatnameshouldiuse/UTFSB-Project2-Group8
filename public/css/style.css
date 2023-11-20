@@ -113,6 +113,7 @@ label {
 
 /* styling for main page */
 .home-head {
+    position: relative;
     font-size: 40px;
     font-weight: 500;
     text-decoration: underline;
@@ -131,6 +132,20 @@ label {
     margin: 0px auto;
     background-color: rgb(9, 42, 73, 0.2);
     overflow: auto;
+}
+
+.stats-link a {
+    text-decoration: none;
+    color: white;
+    align-self: flex-end;
+    font-weight: 600;
+    font-size: 20px;
+    white-space: nowrap;
+    padding-left: 20px;
+}
+
+.stats-link a:hover {
+    color: rgb(141, 202, 255);
 }
 
 /* scrollbar styling */
