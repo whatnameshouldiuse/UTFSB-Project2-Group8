@@ -126,7 +126,6 @@ function RenderAllProjectChart(ChartData, ChartOption)
 function DisplayOneProjectInfo(userData, projectIndex, AllProjectdata)
 {
     ProjectHeaderElement.innerHTML = AllProjectdata[projectIndex].name + " Project";
-
     UserInfoElement.innerHTML = userData.name + "'s " + AllProjectdata[projectIndex].name + " Project is filled with";
     UserInfoElement.innerHTML += "<br>"
 
@@ -137,6 +136,7 @@ function DisplayOneProjectInfo(userData, projectIndex, AllProjectdata)
     }
     UserInfoElement.innerHTML += "&#8226 " + AllProjectdata[projectIndex].tasks[i].name;
     UserInfoElement.innerHTML += " Tasks";
+
 
 }
 
