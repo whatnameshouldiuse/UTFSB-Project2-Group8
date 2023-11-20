@@ -268,6 +268,52 @@
         "color": "#FF0000",
         "priority": 0,
         "project_id": 4
+    },
+    {
+        "id": 31,
+        "name": "Data Structure",
+        "start_date": "2023-10-13T00:00:00",
+        "end_date": "2023-11-15T00:00:00",
+        "color": "#FF0000",
+        "priority": 0,
+        "project_id": 2
+    },
+    {
+        "id": 32,
+        "name": "Artificial Intelligence",
+        "start_date": "2023-10-13T00:00:00",
+        "end_date": "2023-11-15T00:00:00",
+        "color": "#FF0000",
+        "priority": 0,
+        "project_id": 2
+    },    
+    {
+        "id": 33,
+        "name": "IT Governance",
+        "start_date": "2023-10-13T00:00:00",
+        "end_date": "2023-11-15T00:00:00",
+        "color": "#FF0000",
+        "priority": 0,
+        "project_id": 2
+    },
+    {
+        "id": 34,
+        "name": "Software Engineering",
+        "start_date": "2023-10-13T00:00:00",
+        "end_date": "2023-11-15T00:00:00",
+        "color": "#FF0000",
+        "priority": 0,
+        "project_id": 2
+    }    ,
+    {
+        "id": 35,
+        "name": "Software Architectures and Patterns",
+        "start_date": "2023-10-13T00:00:00",
+        "end_date": "2023-11-15T00:00:00",
+        "color": "#FF0000",
+        "priority": 0,
+        "project_id": 2
     }    
+
 
 ]

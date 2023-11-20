@@ -111,6 +111,64 @@ label {
     color: rgb(124, 187, 243);
 }
 
+:root {
+    --primary: #ccdad1;
+    --secondary: #9caea9;
+    --tertiary: #788585;
+    --light-dark: #6f6866;
+    --dark: #38302e;
+    --border-radius: .3rem;
+    --stat-secondary: #e7eceb;    
+    --stat-primary: #eaedeb;    
+    --stat-header: #000137;
+  }
+
+
+.stat-card {
+    margin: 0 10px 0 0;
+  
+    border: 2px solid var(--stat-secondary);
+    border-radius: var(--border-radius);  
+    box-shadow: 6px 5px var(--stat-primary);    
+    max-height: 80vh;
+  }
+
+  .stat-col-lg-40 {
+    flex: 0 0 40%;
+    max-width: 40%;
+    background-color: white;
+  }
+  
+  .stat-col-lg-55 {
+    flex: 0 0 55%;
+    max-width: 55%;
+    background-color: white;    
+  }
+  
+
+.stat-card-header {
+    color: var(--stat-header);
+    background-color: white;
+    padding: 1.0%;
+    text-align: center;
+  /*  border-radius: calc(.18rem - 1px) calc(.18rem - 1px) 0 0;*/
+  }
+  
+  
+  .stat-card-body {
+    padding: 5.0%;
+    color: var(--dark);  
+    background-color: white;    
+    display: flex;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-bottom : 10px;
+    line-height: 1.5;
+/*    font-family: monospace;*/
+    font-size: 110%;
+  }
+  
+
 /* styling for main page */
 .home-head p {
     position: relative;
