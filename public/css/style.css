@@ -112,7 +112,7 @@ label {
 }
 
 /* styling for main page */
-.home-head {
+.home-head p {
     position: relative;
     font-size: 40px;
     font-weight: 500;
@@ -142,6 +142,7 @@ label {
     font-size: 20px;
     white-space: nowrap;
     padding-left: 20px;
+    float: right;
 }
 
 .stats-link a:hover {
