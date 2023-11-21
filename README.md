@@ -38,6 +38,10 @@ SO THAT I can maintain structure and efficiency in my day to day life
 
 [Link to our UI Design Map for our Website](https://www.canva.com/design/DAF0Gc6iu6o/_ajUL3nMiy7WwBeNRLw7Vg/edit?utm_content=DAF0Gc6iu6o&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
+[Presentation slideshow for ProPlanForge](https://prezi.com/view/PJV2LhsldHWI8A2CtYLa/)
+
+[Heroku deployment](https://mysterious-sands-89389-6bcd1486e90b.herokuapp.com/)
+
 ---
 
 ## Installation:
