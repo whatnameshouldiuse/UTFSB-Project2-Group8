@@ -34,7 +34,7 @@ SO THAT I can maintain structure and efficiency in my day to day life
 
 ## Visuals:
 
-![screenshot 1](./)
+![screenshot 1](./public/image/screen7.png)
 
 [Link to our UI Design Map for our Website](https://www.canva.com/design/DAF0Gc6iu6o/_ajUL3nMiy7WwBeNRLw7Vg/edit?utm_content=DAF0Gc6iu6o&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
