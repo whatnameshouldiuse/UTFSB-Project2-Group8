@@ -1,6 +1,7 @@
 //#region Imports
 import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
 mermaid.initialize({ startOnLoad: true });
+const dayjs = require('dayjs')
 
 //#endregion
 
@@ -16,8 +17,32 @@ const SetProjectName = function(newName) {
     ProjectTitle.innerHTML = newName;
 }
 
+/**
+ * 
+ * @param {*} project 
+ * @param {[]} tasks 
+ * @param {[]} checkpoints 
+ */
 const RefreshGantt = function(project, tasks, checkpoints) {
+    var newMermaidGantt = `gantt
+    title ${project.name}
+    dateFormat YYYY-MM-DD\n`;
 
+    const orderedTasks = tasks.sort((t1, t2) => {
+        return t1.priority > t2.priority
+    })
+
+    orderedTasks.forEach((task) => {
+        newMermaidGantt += `section ${task.name}
+        Task : ${dayjs(task.start_date).format('YYYY-MM-DD')}, ${dayjs(task.start_date).diff(dayjs(task.end_date), 'day')}d\n`
+        
+        let taskCheckpoints = checkpoints.filter((check) => { return check.task_id == task.id; });
+        taskCheckpoints.forEach((check) => {
+            newMermaidGantt += `${check.name} : milestone, ${dayjs(check.date).format('YYYY-MM-DD')}, 1D\n`
+        });
+    });
+
+    ProjectGanttChart.innerHTML = newMermaidGantt;
 }
 
 //#endregion
@@ -45,8 +70,8 @@ const GetProject = async function() {
     if (checkpointResponse.status == 500) return;
     const checkpoints = await checkpointResponse.json();
 
-    this.SetProjectName(project.project.name);
-    this.RefreshGantt(project.project, tasks.tasks, checkpoints.checkpoints);
+    SetProjectName(project.project.name);
+    RefreshGantt(project.project, tasks.tasks, checkpoints.checkpoints);
 }
 
 //#endregion
