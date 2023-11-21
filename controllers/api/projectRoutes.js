@@ -21,6 +21,25 @@ router.get('/', async (req, res) => {
     }
 });
 
+router.get('/:id', async (req, res) => {
+    try {
+        const UserProject = Project.findOne({
+            where: {
+                id: req.params.id
+            }
+        });
+
+        if (UserProject.length == 0) {
+            res.status(204).json({ message: 'No content is retrieved' });
+            return;
+        }
+
+        res.status(200).json({ project: UserProject, message: 'User project successfully retrieved'});
+    } catch (err) {
+        res.status(500).json(err);
+    }
+})
+
 router.post('/', async (req, res) => {
     //TODO: Create a new project for the user in request session storage
     try {

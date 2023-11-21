@@ -21,6 +21,7 @@ router.get('/signup', async (req, res) => {
 
 router.get('/project/:id', async (req, res) => {
     //TODO: Display project based on the selected id
+    res.render('project');
 }); 
 
 router.get('/stats', async (req, res) => {
