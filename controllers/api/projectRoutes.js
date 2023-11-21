@@ -23,9 +23,10 @@ router.get('/', async (req, res) => {
 
 router.get('/:id', async (req, res) => {
     try {
+        const idNum = parseInt(req.params.id);
         const UserProject = Project.findOne({
             where: {
-                id: req.params.id
+                id: idNum
             }
         });
 
@@ -34,7 +35,7 @@ router.get('/:id', async (req, res) => {
             return;
         }
 
-        res.status(200).json({ project: UserProject, message: 'User project successfully retrieved'});
+        res.status(200).json(UserProject);
     } catch (err) {
         res.status(500).json(err);
     }

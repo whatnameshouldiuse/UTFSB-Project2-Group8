@@ -1,14 +1,12 @@
-//#region Imports
 import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-mermaid.initialize({ startOnLoad: true });
-const dayjs = require('dayjs')
-
-//#endregion
+mermaid.initialize({ startOnLoad: false });
+// import { dayjs } from 'https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js';
 
 //#region Initial Const
 const ProjectGanttChart = document.getElementById('gantt');
 const ProjectTitle = document.getElementById('project-title');
-const ProjectId = document.location.split('/').pop();
+console.log(document.location);
+const ProjectId = document.location.href.split('/').pop();
 
 //#endregion
 
@@ -42,38 +40,42 @@ const RefreshGantt = function(project, tasks, checkpoints) {
         });
     });
 
+    console.log(newMermaidGantt);
     ProjectGanttChart.innerHTML = newMermaidGantt;
+    mermaid.run();
 }
 
 //#endregion
 
 //#region API Calls
 const GetProject = async function() {
-    const projectResponse = await fetch(`/api/project/${ProjectId}`, {
+    const projectResponse = await fetch(`/api/projects/${ProjectId}`, {
         method: 'GET',
         headers: { 'Content-Type': 'application/json' }
     });
     if (projectResponse.status == 500) return;
     const project = await projectResponse.json();
+    console.log(project);
 
-    const tasksResponse = await fetch(`api/task/${ProjectId}`, {
+    const tasksResponse = await fetch(`api/tasks/${ProjectId}`, {
         method: 'GET',
         headers: { 'Content-Type': 'application/json' }
     });
     if (tasksResponse.status == 500) return;
     const tasks = await tasksResponse.json();
 
-    const checkpointResponse = await fetch(`api/checkpoint/${ProjectId}`, {
+    const checkpointResponse = await fetch(`api/checkpoints/${ProjectId}`, {
         method: 'GET',
         headers: { 'Content-Type': 'application/json' }
     });
     if (checkpointResponse.status == 500) return;
     const checkpoints = await checkpointResponse.json();
 
-    SetProjectName(project.project.name);
-    RefreshGantt(project.project, tasks.tasks, checkpoints.checkpoints);
+    SetProjectName(project.name);
+    RefreshGantt(project, tasks.tasks, checkpoints.checkpoints);
 }
 
 //#endregion
 
+console.log(ProjectId);
 GetProject();
