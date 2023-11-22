@@ -12,11 +12,13 @@ router.get('/', async (req, res) => {
 router.get('/login', async (req, res) => {
     //TODO: login page
     // If there is a user data stored in the session already, redirect to homepage
+    res.render('login');
 });
 
 router.get('/signup', async (req, res) => {
     //TODO: signup page
     // If there is a user data stored in the session already, redirect to homepage
+    res.render('login');
 });
 
 router.get('/project/', async (req, res) => {
