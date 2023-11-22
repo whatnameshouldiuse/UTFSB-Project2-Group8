@@ -5,10 +5,10 @@ const inputPassword = document.querySelector("#InputPassword").value.trim()
 const confirmPassword = document.querySelector("#ConfirmPassword").value.trim()
 async function signupHandler(e){
     e.preventDefault()
-    if(!checkMatchingPasswordInputs())return 
+    if(!checkMatchingPasswordInputs())return
     try{
         const response = await fetch('/api/users', {
-            method:"Post",
+            method:"POST",
             body: JSON.stringify({ email, inputPassword, confirmPassword, nameFirst, nameLast}),
             headers: {"Content-Type":"application/json"}
         })
@@ -19,7 +19,7 @@ async function signupHandler(e){
             alert(response.statusText)
         }
     } catch (error) {
-
+        console.error(error)
     }
 }
 
