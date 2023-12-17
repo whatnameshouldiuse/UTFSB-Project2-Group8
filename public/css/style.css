@@ -137,14 +137,30 @@ label {
     max-height: 80vh;
   }
 
-  .stat-col-lg-40 {
-    flex: 0 0 40%;
+.stat-row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+  
+
+.stat-flex-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+  
+
+.stat-col-lg-40 {
+    flex: 1 1 40%;
     max-width: 40%;
     background-color: white;
   }
   
-  .stat-col-lg-55 {
-    flex: 0 0 55%;
+.stat-col-lg-55 {
+    flex: 1 1 55%;
     max-width: 55%;
     background-color: white;    
   }
@@ -166,7 +182,7 @@ label {
     display: flex;
     margin-left: 10px;
     margin-right: 10px;
-    padding-bottom : 10px;
+    padding-bottom : 20px;
     line-height: 1.5;
 /*    font-family: monospace;*/
     font-size: 110%;
@@ -225,3 +241,152 @@ label {
     border-radius: 15px;
     border: 2px double #ffffff;
   }
+
+
+/* Tablets - header changes color */
+@media screen and (max-width: 992px) 
+{
+  main {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
+
+.stat-row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+  .stat-col-lg-40 {
+    flex: 1 1 100%;
+    max-width: 100%;    
+    background-color: white;
+  }
+  
+  .stat-col-lg-55 {
+    flex: 1 1 100%;
+    max-width: 100%;    
+    background-color: white;    
+  }
+
+
+  }
+  
+  
+
+/* Large smartphones */
+@media screen and (max-width: 768px) 
+{
+body{
+  width: 100%;  
+}
+
+header {
+  width: 100%;
+}
+
+nav {
+  width: 100%;
+}
+
+.stat-row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+  
+.stat-col-lg-40 {
+  flex: 1 1 100%;
+  max-width: 100%;      
+  background-color: white;
+}
+  
+.stat-col-lg-55 {
+  flex: 1 1 100%;
+  max-width: 100%;      
+  background-color: white;    
+}
+
+}
+
+/* Small smartphones */
+@media screen and (max-width: 576px) 
+{
+body{
+  width: 100%;  
+}
+
+header {
+  width: 100%;
+}
+
+nav {
+  width: 100%;
+}
+
+.stat-row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.stat-col-lg-40 {
+  flex: 1 1 100%;
+  max-width: 100%;      
+  background-color: white;
+}
+  
+.stat-col-lg-55 {
+  flex: 1 1 100%;
+  max-width: 100%;      
+  background-color: white;    
+}
+
+}
+
+
+/* Galaxy Folder */
+@media screen and (max-width: 280px) 
+{
+body{
+  width: 100%;  
+}
+
+header {
+  width: 100%;
+}
+
+nav {
+  width: 100%;
+}
+
+.stat-row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.stat-col-lg-40 {
+  flex: 1 1 100%;
+  max-width: 100%;      
+  background-color: white;
+}
+  
+.stat-col-lg-55 {
+  flex: 1 1 100%;
+  max-width: 100%;      
+  background-color: white;    
+}
+
+}
+
